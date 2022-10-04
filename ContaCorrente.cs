@@ -1,10 +1,12 @@
-﻿using System; 
+﻿using System;
+using bytebank.titular;
+
 
 namespace bytebank
 {
     public class ContaCorrente
     {
-       public string titular;
+       public Cliente titular;
        public string conta;
         public int numero_agencia;
         public string nome_agencia;
