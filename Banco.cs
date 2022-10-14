@@ -14,7 +14,7 @@ class Banco
         cliente1.conta = "10123-X";
         cliente1.numero_agencia = 23;
         cliente1.nome_agencia = "Agência Central";
-        cliente1.saldo = 100;
+        cliente1.SetSaldo(100);
 
         ContaCorrente cliente2 = new ContaCorrente();
         cliente2.titular = new Cliente();
@@ -24,16 +24,17 @@ class Banco
         cliente2.conta = "10106-X";
         cliente2.numero_agencia = 23;
         cliente2.nome_agencia = "Agência Central";
-        cliente2.saldo = 100;
+        cliente2.SetSaldo(100);
 
         cliente1.ExibirDados();
         Console.WriteLine();
 
-        Console.WriteLine("Saldo de André pré transferência: " + cliente1.saldo);
-        Console.WriteLine("Saldo de Amanda pré transferência: "+ cliente2.saldo);
+        Console.WriteLine("Saldo de André pré transferência: " + cliente1.GetSaldo());
+        Console.WriteLine("Saldo de Amanda pré transferência: "+ cliente2.GetSaldo());
         cliente1.Transferir(50, cliente2);
-        Console.WriteLine("Saldo de André após transferência: "+ cliente1.saldo);
-        Console.WriteLine("Saldo de Amanda após transferência: " + cliente2.saldo);
+        Console.WriteLine("Saldo de André após transferência: "+ cliente1.GetSaldo());
+        Console.WriteLine("Saldo de Amanda após transferência: " + cliente2.GetSaldo());
+
 
         Console.ReadKey();
 
